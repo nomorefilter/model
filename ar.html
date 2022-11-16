@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" contact="説明文">
+        <title>AR</title>
+        <link rel="stylesheet" href="css/sanitize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    </head>
+    <body>
+        <a-scene embedded arjs>
+            <a-marker type="pattern" url="data/pattern-eiko.patt">
+                <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
