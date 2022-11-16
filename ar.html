@@ -12,8 +12,12 @@
     </head>
     <body>
         <a-scene embedded arjs>
+            <a-assets timeout="10000">
+                <a-asset-item id="obj" src="model/table.obj"></a-asset-item>
+                <a-asset-item id="mtl" src="model/table.mtl"></a-asset-item>
+            </a-assets>
             <a-marker type="pattern" url="data/pattern-eiko.patt">
-                <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
+                <a-obj-model src="#obj" mtl="#mtl" scale="1 1 1" position="0 0.5 0">
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
